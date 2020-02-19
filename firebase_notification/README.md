@@ -1,6 +1,5 @@
-# firebase_notification
-
-Notificações no Flutter utilizando: 
+# Notificações no Flutter
+Packages utilizados:
  - [[v6.0.9] Firebase Notification](https://pub.dev/packages/firebase_messaging/versions)
  - [[v1.5.2] Slidy](https://pub.dev/packages/slidy/versions)
  - [[v0.5.1] Flutter Modular](https://pub.dev/packages/flutter_modular)
