@@ -5,7 +5,7 @@ Packages utilizados:
  - [[v0.5.1] Flutter Modular](https://pub.dev/packages/flutter_modular)
  - [[v1.0.2] MobX](https://pub.dev/packages/mobx)
 
-O segredo de tudo está na pasta ["firebase_notification/lib/app/notification"](firebase_notification/lib/app/notification)
+O segredo de tudo está na pasta ["lib/app/notification"](lib/app/notification)
 
 Ali temos o Mixin `FirebaseMessagingReceiveMixin`
 Coloque ele no seu `AppWidget`, dessa forma:
