@@ -17,9 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  get: ^1.10.5
   firebase_messaging: ^6.0.9
-  dio: ^3.0.8
   flutter_mobx: ^1.0.1
   mobx: ^1.0.2
   flutter_modular: ^0.5.1
