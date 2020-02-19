@@ -1,16 +1,33 @@
 # firebase_notification
 
-Firebase notification example in Flutter.
+Notificações no Flutter utilizando: 
+ - [[v6.0.9] Firebase Notification](https://pub.dev/packages/firebase_messaging/versions)
+ - [[v1.5.2] Slidy](https://pub.dev/packages/slidy/versions)
+ - [[v0.5.1] Flutter Modular](https://pub.dev/packages/flutter_modular)
+ - [[v1.0.2] MobX](https://pub.dev/packages/mobx)
 
-## Getting Started
+O segredo de tudo está na pasta ["firebase_notification/lib/app/notification"](firebase_notification/lib/app/notification)
 
-This project is a starting point for a Flutter application.
+Ali temos o Mixin `FirebaseMessagingReceiveMixin`
+Coloque ele no seu `AppWidget`, dessa forma:
+```dart
+class _AppWidgetState extends State<AppWidget> with FirebaseMessagingReceiveMixin {
 
-A few resources to get you started if this is your first Flutter project:
+}
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Adicione o bind do `FirebaseMessagingReceiveStore` ao `AppModule`:
+```dart
+class AppModule extends MainModule {
+  @override
+  List<Bind> get binds => [
+        Bind((i) => AppController()),
+        Bind((i) => FirebaseMessagingReceiveStore()),
+      ];
+...
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+E aí é só chamar em qualquer lugar com o get do modular:
+```dart
+final FirebaseMessagingReceiveStore messagingStore = Modular.get();
+```
