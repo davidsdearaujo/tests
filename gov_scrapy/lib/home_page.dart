@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gov_scrapy/home_tile.dart';
 import 'package:gov_scrapy/models/posts_group.dart';
-import 'package:sticky_infinite_list/state.dart';
+import 'package:sticky_infinite_list/sticky_infinite_list.dart';
 import 'package:sticky_infinite_list/widget.dart';
 
 import 'home_repository.dart';
@@ -40,13 +40,15 @@ class _HomePageState extends State<HomePage> {
               await future;
             },
             child: InfiniteList(
-              maxChildCount: snapshot.data.length,
+              posChildCount: snapshot.data.length,
               builder: (context, index) {
                 final currentGroup = snapshot.data[index];
                 return InfiniteListItem(
-                  initialHeaderBuild: true,
+                  crossAxisAlignment: HeaderCrossAxisAlignment.center,
+                  mainAxisAlignment: HeaderMainAxisAlignment.start,
+
+                  // initialHeaderBuild: true,
                   minOffsetProvider: (state) => 50,
-                  headerAlignment: HeaderAlignment.topLeft,
                   // headerStateBuilder: (context, state) {
                   //   return Container(
                   //     alignment: Alignment.center,

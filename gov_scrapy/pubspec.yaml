@@ -17,7 +17,7 @@ environment:
   sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
-  sticky_infinite_list: ^1.2.3
+  sticky_infinite_list: ^3.0.0
   dio: ^3.0.9
   html: ^0.14.0+3
   flutter:
