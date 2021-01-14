@@ -1,0 +1,15 @@
+lib/app/shared//bloc_builder.dart
+open_container/lib/main.dart
+open_container/lib/app/app_module.dart
+open_container/lib/app/app_widget.dart
+open_container/lib/app/modules/home/home_module.dart
+open_container/lib/app/bloc/app_bloc.dart
+open_container/lib/app/bloc/app_state.dart
+open_container/lib/app/bloc/app_event.dart
+open_container/lib/app/modules/home/home_page.dart
+open_container/test/app/modules/home/home_page_test.dart
+open_container/lib/app/modules/home/bloc/home_bloc.dart
+open_container/lib/app/modules/home/bloc/home_state.dart
+open_container/lib/app/modules/home/bloc/home_event.dart
+open_container/test/app/app_bloc_test.dart
+open_container/test/app/modules/home/home_bloc_test.dart
